@@ -1,2 +1,2 @@
 # GeoDoo.github.io
-These are some assignments for SPA with AngularJS MOOC on Coursera.
+These are assignments for <a href="https://www.coursera.org/learn/single-page-web-apps-with-angularjs">Single Page Web Applications with AngularJS</a> MOOC on Coursera.
