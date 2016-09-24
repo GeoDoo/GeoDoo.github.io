@@ -11,11 +11,19 @@
 		var toBuyList = this;
 
 		toBuyList.items = ShoppingListCheckOffService.items;
+
+		toBuyList.itemBought = function(index) {
+			ShoppingListCheckOffService.itemBought(index);
+		}
 	}
 
 	AlreadyBoughtShoppingController.$inject = ['ShoppingListCheckOffService'];
 	function AlreadyBoughtShoppingController(ShoppingListCheckOffService) {
 		var alreadyBoughtList = this;
+
+		alreadyBoughtList.items = ShoppingListCheckOffService.itemsBought;
+
+
 	}
 
 	function ShoppingListCheckOffService() {
@@ -28,8 +36,11 @@
 			{ name: '100 lollipops' }
 		];
 
+		service.itemsBought = [];
+
 		service.itemBought = function (index) {
-			console.log(index);
+			service.itemsBought.push(service.items[index]);
+			service.items.splice(index, 1);
 		};
 	}
 
