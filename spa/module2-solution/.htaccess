@@ -1,3 +1,0 @@
-RewriteCond %{REQUEST_URI} !\.(jpg|png|gif|svg|css|js|ico|rss|xml|json|woff|woff2)$
-RewriteCond %{REQUEST_URI} !-d
-RewriteRule ^ index.html [L,QSA]
