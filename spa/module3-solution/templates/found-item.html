@@ -1,6 +1,6 @@
 <ul>
-  <li ng-repeat="item in list.found track by $index">
-  	{{item}}
+  <li ng-repeat="item in list.found">
+  	{{item.name}}
   	<button ng-click="list.removeItem($index)">Remove item</button>
   </li>
 </ul>

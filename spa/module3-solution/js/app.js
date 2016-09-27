@@ -39,7 +39,7 @@
 			    var foundItems = [];
 			    for (var i = 0; i < response.data.menu_items.length; i++) {
 			    	if (response.data.menu_items[i].name.indexOf(searchTerm) > -1) {
-			    		foundItems.push(response.data.menu_items[i].name);
+			    		foundItems.push({name: response.data.menu_items[i].name});
 			    	}
 			    }
 			    callback(foundItems);
