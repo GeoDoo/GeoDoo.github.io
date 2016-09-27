@@ -5,8 +5,7 @@ input[type="text"] {
   width: 200px;
   float: left;
 }
-.narrow-button {
-  float: left;
+.narrow-button button {
   margin-left: 10px;
 }
 .loader {
