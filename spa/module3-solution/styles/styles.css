@@ -49,3 +49,13 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+ul li {
+  display: table;
+  width: 60%;
+}
+li button,
+li span {
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+}
