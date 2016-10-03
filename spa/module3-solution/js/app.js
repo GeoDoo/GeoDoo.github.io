@@ -15,6 +15,7 @@
 
 		list.getResults = function(searchTerm) {
 			if (list.searchTerm === '') {
+				list.message = 'Nothing found';
 				return;
 			}
 			MenuSearchService.getMatchedMenuItems(searchTerm, function(data) {
