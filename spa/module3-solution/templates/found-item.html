@@ -1,6 +1,8 @@
 <ol>
   <li ng-repeat="item in found">
   	<span>{{item.name}}</span>
+  	<span>{{item.shortName}}</span>
+  	<p>{{item.decription}}</p>
   	<button class="btn btn-danger" ng-click="removeItem({index: $index})">Don't want this one!</button>
   </li>
 </ol>
