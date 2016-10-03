@@ -42,7 +42,7 @@
 			    	if (response.data.menu_items[i].description.indexOf(searchTerm) > -1) {
 			    		foundItems.push({
 			    			name: response.data.menu_items[i].name,
-			    			shortName: response.data.menu_items[i].shortName,
+			    			shortName: response.data.menu_items[i].short_name,
 			    			description: response.data.menu_items[i].description
 			    		});
 			    	}
