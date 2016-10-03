@@ -19,7 +19,6 @@
 			}
 			MenuSearchService.getMatchedMenuItems(searchTerm, function(data) {
 				list.found = data;
-				console.log(list.found.length)
 				if (list.found.length === 0) {
 					list.message = 'Nothing found';
 				}
