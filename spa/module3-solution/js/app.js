@@ -41,7 +41,6 @@
 			})
 			.then(function successCallback(response) {
 			    // process result and only keep items that match
-			    console.log(response.data.menu_items)
 			    var foundItems = [];
 			    for (var i = 0; i < response.data.menu_items.length; i++) {
 			    	if (response.data.menu_items[i].description.indexOf(searchTerm) > -1) {
