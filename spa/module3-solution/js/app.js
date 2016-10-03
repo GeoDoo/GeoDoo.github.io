@@ -53,7 +53,8 @@
 	function FoundItems() {
 		var ddo = {
 			scope: {
-				found: '<'
+				found: '<',
+				removeItem: '='
 			},
 			templateUrl: 'templates/found-item.html'
 		};
