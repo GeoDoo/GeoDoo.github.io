@@ -52,6 +52,9 @@
 
 	function FoundItems() {
 		var ddo = {
+			scope: {
+				found: '<'
+			},
 			templateUrl: 'templates/found-item.html'
 		};
 
