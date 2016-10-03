@@ -38,6 +38,7 @@
 			    // process result and only keep items that match
 			    var foundItems = [];
 			    for (var i = 0; i < response.data.menu_items.length; i++) {
+			    	console.log(response.data.menu_items)
 			    	if (response.data.menu_items[i].name.indexOf(searchTerm) > -1) {
 			    		foundItems.push({name: response.data.menu_items[i].name});
 			    	}
