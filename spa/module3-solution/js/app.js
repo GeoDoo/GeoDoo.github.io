@@ -11,6 +11,7 @@
 		var list = this;
 		list.searchTerm = '';
 		list.foundItems = [];
+		list.message = '';
 
 		list.getResults = function(searchTerm) {
 			if (list.searchTerm === '') {
@@ -18,6 +19,10 @@
 			}
 			MenuSearchService.getMatchedMenuItems(searchTerm, function(data) {
 				list.found = data;
+				console.log(list.found.length)
+				if (list.found.length === 0) {
+					list.message = 'Nothing found';
+				}
 			});
 		};
 
