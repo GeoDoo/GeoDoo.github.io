@@ -7,8 +7,8 @@
 	MenuDataService.$inject = ['$http'];
 	function MenuDataService($http) {
 		var menu = this;
-		var menu.categories = [];
-		var menu.itemsForCategory = null;
+		menu.categories = [];
+		menu.itemsForCategory = null;
 
 		menu.getAllCategories = function() {
 			$http.get('https://davids-restaurant.herokuapp.com/categories.json')
