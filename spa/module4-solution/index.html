@@ -9,18 +9,20 @@
   </head>
 <body>
   
-  <categories categories=""></categories>
+  <ui-view></ui-view>
 
   <!-- Libraries -->
   <script type="text/javascript" src="libs/angular.min.js"></script>
   <script type="text/javascript" src="libs/angular-ui-router.min.js"></script>
   <!-- Modules -->
-  <script type="text/javascript" src="js/menuapp.module.js"></script>
-  <script type="text/javascript" src="js/data.module.js"></script>
+  <script type="text/javascript" src="src/menuapp.module.js"></script>
+  <script type="text/javascript" src="src/data.module.js"></script>
+  <!-- Routes -->
+  <script src="src/routes.js"></script>
   <!-- Module artifacts -->
-  <script type="text/javascript" src="js/services/menudata.service.js"></script>
-  <script type="text/javascript" src="js/components/categories.component.js"></script>
-  <script type="text/javascript" src="js/components/items.component.js"></script>
+  <script type="text/javascript" src="src/services/menudata.service.js"></script>
+  <script type="text/javascript" src="src/components/categories.component.js"></script>
+  <script type="text/javascript" src="src/components/items.component.js"></script>
 
 </body>
 </html>
