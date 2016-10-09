@@ -5,3 +5,13 @@
 <h2>{{ categoryItems.category }}</h2>
 
 <items items="categoryItems.menuItems"></items>
+
+<ul>
+	<li ng-repeat="item in categoryItems.menuItems">
+		<div>
+			<h4>{{item.name}}</h4>
+			<span>{{item.price_large}}</span>
+			<p>{{item.description}}</p>
+		</div>
+	</li>
+</ul>
