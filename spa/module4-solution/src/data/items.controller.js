@@ -8,7 +8,7 @@ angular.module('data')
 CategoryItemsController.$inject = ['items']
 function CategoryItemsController(item) {
   var categoryItems = this;
-  categoryItems.name = items.name;
+  categoryItems.category = items.category.name;
   // itemDetail.quantity = items.quantity;
   // itemDetail.description = items.description;
 }
