@@ -24,7 +24,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'CategoriesListController as categoriesList',
     resolve: {
       categories: ['MenuDataService', function (MenuDataService) {
-        console.log('service returns: ', MenuDataService.getAllCategories())
         return MenuDataService.getAllCategories();
       }]
     }
