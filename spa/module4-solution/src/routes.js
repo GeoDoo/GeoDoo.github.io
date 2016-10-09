@@ -26,10 +26,25 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
       categories: ['MenuDataService', function (MenuDataService) {
         return MenuDataService.getAllCategories()
           .then(function(categories) {
-            console.log(categories);
+            console.log(categories)
             return categories;
           });
       }]
+    }
+  })
+  .state('items', {
+    url: '/categories/{categoryShortName}',
+    templateUrl: 'src/data/templates/items.template.html',
+    controller: 'CategoryItemsController as categoryItems',
+    resolve: {
+      items: ['$stateParams', 'MenuDataService',
+            function ($stateParams, MenuDataService) {
+              return MenuDataService.getItemsForCategory($stateParams.categoryShortName)
+                .then(function (category) {
+                  console.log(category)
+                  return category;
+                });
+            }]
     }
   });
 }
