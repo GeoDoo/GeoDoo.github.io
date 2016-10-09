@@ -26,7 +26,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
       categories: ['MenuDataService', function (MenuDataService) {
         return MenuDataService.getAllCategories()
           .then(function(categories) {
-            console.log(categories)
             return categories;
           });
       }]
@@ -34,7 +33,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
   .state('items', {
     url: '/categories/{categoryShortName}',
-    templateUrl: 'src/data/templates/items.template.html',
+    // templateUrl: 'src/data/templates/items.template.html',
     controller: 'CategoryItemsController as categoryItems',
     resolve: {
       items: ['$stateParams', 'MenuDataService',
