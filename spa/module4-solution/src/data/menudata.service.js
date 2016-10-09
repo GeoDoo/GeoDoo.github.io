@@ -13,7 +13,8 @@
 			.then(function(response) {
 				return response.data;
 			});
-			return categories.value;
+			console.log(categories)
+			return categories;
 		};
 
 		menu.getItemsForCategory = function(categoryShortName) {
