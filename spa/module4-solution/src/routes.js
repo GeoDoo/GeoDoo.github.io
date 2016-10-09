@@ -26,6 +26,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
       categories: ['MenuDataService', function (MenuDataService) {
         return MenuDataService.getAllCategories()
           .then(function(response) {
+            console.log(response)
             return response.data;
           });
       }]
