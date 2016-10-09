@@ -2,7 +2,12 @@
 	'use strict';
 
 	angular.module('data')
-	.component('items', {});
+	.component('items', {
+		templateUrl: '',
+		bindings: {
+			items: '<'
+		}
+	});
 
 
 })()

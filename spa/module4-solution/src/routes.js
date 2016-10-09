@@ -33,7 +33,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
   .state('items', {
     url: '/categories/{categoryShortName}/items',
-    templateUrl: 'src/data/templates/items.template.html',
+    templateUrl: 'src/data/templates/main-items.template.html',
     controller: 'CategoryItemsController as categoryItems',
     resolve: {
       items: ['$stateParams', 'MenuDataService',

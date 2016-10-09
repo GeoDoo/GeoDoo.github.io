@@ -9,8 +9,7 @@ CategoryItemsController.$inject = ['items']
 function CategoryItemsController(item) {
   var categoryItems = this;
   categoryItems.category = items.category.name;
-  // itemDetail.quantity = items.quantity;
-  // itemDetail.description = items.description;
+  categoryItems.items = items.menu_items;
 }
 
 })();
