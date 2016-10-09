@@ -15,12 +15,12 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // Home page
   .state('home', {
     url: '/',
-    templateUrl: 'data/templates/home.template.html'
+    templateUrl: 'src/data/templates/home.template.html'
   })
   // Premade list page
   .state('categories', {
     url: '/categories',
-    templateUrl: 'data/templates/main-categories.template.html',
+    templateUrl: 'src/data/templates/main-categories.template.html',
     controller: 'CategoriesListController as categoriesList',
     resolve: {
       categories: ['MenuDataService', function (MenuDataService) {
