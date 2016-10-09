@@ -7,13 +7,16 @@
 	MenuDataService.$inject = ['$http'];
 	function MenuDataService($http) {
 		var menu = this;
+		menu.categories = [];
 		menu.itemsForCategory = null;
 
 		menu.getAllCategories = function() {
 			$http.get('https://davids-restaurant.herokuapp.com/categories.json')
 			.then(function(response) {
-				return response.data;
+				menu.categories = response.data;
+				console.log(response.data);
 			});
+			return menu.categories;
 		};
 
 		menu.getItemsForCategory = function(categoryShortName) {
