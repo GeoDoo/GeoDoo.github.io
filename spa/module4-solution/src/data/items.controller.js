@@ -6,7 +6,7 @@ angular.module('data')
 
 // 'item' is injected through state's resolve
 CategoryItemsController.$inject = ['items']
-function CategoryItemsController(item) {
+function CategoryItemsController(items) {
   var categoryItems = this;
   categoryItems.category = items.category.name;
   categoryItems.items = items.menu_items;
