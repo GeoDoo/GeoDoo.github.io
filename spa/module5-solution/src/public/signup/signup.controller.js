@@ -6,8 +6,8 @@ angular.module('public')
 
 // MenuItemsController.$inject = [''];
 function SignupController() {
-  var $ctrl = this;
-  
+  var signupCtrl = this;
+
   signupCtrl.submit = function () {
     reg.completed = true;
   };
