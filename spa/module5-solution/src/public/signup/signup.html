@@ -1,6 +1,7 @@
 <div class="container">
 <form name='signupCtrlForm' novalidate>
 
+<div class="form-group">
   <input type="text" name="username" placeholder="Pick a username"
     ng-model="signupCtrl.user.username"
     required
@@ -14,23 +15,25 @@
     <span ng-if="signupCtrlForm.username.$error.maxlength && signupCtrlForm.username.$touched">
       Username must not be longer than 10 characters
     </span>
-    <br>
+</div>
 
+<div class="form-group">
   <input type="email" name="email" placeholder="Email"
     ng-model="signupCtrl.user.email"
     required>
     <span ng-if="signupCtrlForm.email.$invalid && signupCtrlForm.email.$touched">
       Must be a valid email address: handle@domain format
     </span>
-    <br>
+</div>
 
+<div class="form-group">
   <input type="text" name="phone" placeholder="Phone ###-###-####"
     ng-model="signupCtrl.user.phone"
     pattern="(\d{3})-(\d{3})-(\d{4})">
     <span ng-if="signupCtrlForm.phone.$invalid && signupCtrlForm.phone.$touched">
       Phone must be in the format ###-###-####.
     </span>
-    <br>
+</div>
 
   <button
     ng-disabled="signupCtrlForm.$invalid"
