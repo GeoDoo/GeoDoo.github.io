@@ -9,7 +9,7 @@ function SignupController() {
   var signupCtrl = this;
 
   signupCtrl.submit = function () {
-    reg.completed = true;
+    signupCtrl.completed = true;
   };
 }
 
